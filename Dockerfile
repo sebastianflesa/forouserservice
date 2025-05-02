@@ -19,8 +19,8 @@ COPY wallet/ $ORACLE_WALLET_DIR/
  
  
 # Copiamos el JAR generado en el contenedor
-COPY target/foringa-0.0.1-SNAPSHOT.jar foringa_user_service.jar
+COPY target/mi-nuevo-proyecto-1.0-SNAPSHOT.jar app.jar
 # Exponemos el puerto 8080 (el que usa Spring Boot por defecto)
 EXPOSE 8080
 # Comando para ejecutar la aplicación cuando el contenedor arranque
-ENTRYPOINT ["java", "-jar", "foringa_user_service.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
