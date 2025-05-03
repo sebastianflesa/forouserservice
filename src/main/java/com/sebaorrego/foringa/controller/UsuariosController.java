@@ -18,7 +18,7 @@ import com.sebaorrego.foringa.dto.ResponseDTO;
 import com.sebaorrego.foringa.dto.RolDTO;
 import com.sebaorrego.foringa.dto.UsuarioDTO;
 
-@CrossOrigin(origins = "http://34.237.247.129", allowCredentials = "true")
+@CrossOrigin(origins = "http://34.237.247.129")
 @RestController
 @RequestMapping("/usuarios")
 public class UsuariosController {
