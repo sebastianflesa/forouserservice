@@ -15,8 +15,8 @@ public class SecurityConfig {
             .cors().and()
             .csrf().disable()
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // 👈 habilita preflight
-                .requestMatchers("/usuarios/login").permitAll()
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .requestMatchers("/usuarios/login", "/usuarios/crear").permitAll()
                 .anyRequest().authenticated()
             );
         return http.build();
