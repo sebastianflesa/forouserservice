@@ -14,10 +14,11 @@ public class SecurityConfig {
         http
             .cors().and()
             .csrf().disable()
-            .authorizeRequests()
-                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/usuarios/login", "/usuarios/crear").permitAll()
-                .anyRequest().authenticated();
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // 👈 habilita preflight
+                .requestMatchers("/usuarios/login").permitAll()
+                .anyRequest().authenticated()
+            );
         return http.build();
     }
 }
