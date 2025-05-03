@@ -12,6 +12,6 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins("http://34.237.247.129")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowCredentials(false);
     }
 }
